@@ -21,6 +21,10 @@ Remember that these steps are specific to creating a virtual environment using t
 Command summary:
 
 py -m venv venv
+
 venv3_7\Scripts\activate
+
 call venv\Scripts\activate
+
 py -m pip freeze 
+
