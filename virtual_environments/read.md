@@ -23,4 +23,4 @@ Command summary:
 py -m venv venv
 venv3_7\Scripts\activate
 call venv\Scripts\activate
-py -m pip freeze
+py -m pip freeze 
