@@ -1,1 +1,23 @@
+repos:
+- repo: https://github.com/pre-commit/mirrors-autopep8
+  rev: ''  # Specify a specific version/tag/commit or leave empty for the latest version
+  hooks:
+  - id: autopep8
+    exclude: '^$'  # Specify files or patterns to exclude, '^$' excludes nothing (all files will be checked)
 
+- repo: https://github.com/PyCQA/flake8 # lake8 is a python tool that glues together pycodestyle, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code
+  rev: 6.0.0
+  hooks:
+  - id: flake8
+    args: [--ignore=E501]
+
+- repo: https://github.com/pycqa/isort # isort is a Python utility / library to sort imports alphabetically and automatically separate into sections and by type
+  rev: ''
+  hooks:
+  - id: isort
+    name: isort
+
+- repo: https://github.com/PyCQA/autoflake # autoflake removes unused imports and unused variables from Python code
+  rev: ''
+  hooks:
+  - id: autoflake
