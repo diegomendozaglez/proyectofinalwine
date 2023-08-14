@@ -84,7 +84,7 @@ def test_csv_file_existence():
     Test case to check if the CSV file exists.
     """
     # Provide the path to your CSV file that needs to be tested
-    csv_file_path = "C:/Users/IOR_C/OneDrive/Documentos/GitHub/mlops-mobilepc/mobilepc/mobilepc/data/train.csv"
+    csv_file_path = "C:\Users\diego.mendoza\Desktop\WINE\proyectofinalwine\winequality_model\trai\train.csv"
 
     # Call the function to check if the CSV file exists
     file_exists = does_csv_file_exist(csv_file_path)
@@ -111,7 +111,7 @@ def test_pkl_file_existence():
     Test case to check if the pkl file exists.
     """
     # Provide the path to your pkl file that needs to be tested
-    pkl_file_path = "C:/Users/IOR_C/OneDrive/Documentos/GitHub/mlops-mobilepc/mobilepc/mobilepc/models/SVM_output.pkl"
+    pkl_file_path = "C:\Users\diego.mendoza\Desktop\WINE\proyectofinalwine\winequality_model\models\SVM_output.pkl"
 
     # Call the function to check if the pkl file exists
     file_exists = does_pkl_file_exist(pkl_file_path)
