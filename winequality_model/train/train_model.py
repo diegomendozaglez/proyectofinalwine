@@ -1,3 +1,18 @@
+from sklearn.pipeline import Pipeline
+
+transformations_pipeline = Pipeline(
+                              [
+                                ('missing_indicator', MissingIndicator(variables=NUMERICAL_VARS)),
+                                ('median_imputation', NumericalImputer(variables=NUMERICAL_VARS_WITH_NA))
+
+
+Pipeline(steps=[('missing_indicator',MissingIndicator(variables=['fixed acidity','volatile acidity'])),
+              ('median_imputation',NumericalImputer(variables=['chlorides','free sulfur dioxide']))])
+
+
+X_train = transformations_pipeline.fit_transform(X_train)
+
+
 def model_evaluation(model, X_train, y_train, X_test, y_test):
     
     print('Starting ...')
