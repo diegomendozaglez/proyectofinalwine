@@ -100,9 +100,9 @@ Follow the next steps to run the test.
   ```
 
   ====================================================================================================== test session starts ======================================================================================================
-  platform win32 -- Python 3.10.9, pytest-7.4.0, pluggy-0.13.1 -- C:\Users\IOR_C\OneDrive\Documentos\GitHub\mlops-mobilepc\venv\Scripts\python.exe
+  platform win32 -- Python 3.10.9, pytest-7.4.0, pluggy-0.13.1 -- C:\Users\IOR_C\OneDrive\Documentos\GitHub\mlops-winemodel\venv\Scripts\python.exe
   cachedir: .pytest_cache
-  rootdir: C:\Users\IOR_C\OneDrive\Documentos\GitHub\mlops-mobilepc\mobilepc
+  rootdir: C:\Users\IOR_C\OneDrive\Documentos\GitHub\mlops-winemodel\winemodel
   plugins: anyio-3.7.1
   collected 4 items
 
@@ -120,7 +120,7 @@ Follow the next steps to run the test.
 
 Run the next command to start the Mobile Price API locally:
 
-> Remember to change up you directory to `mlops-mobilepc/mobilepc/mobilepc`
+> Remember to change up you directory to `mlops-winemodel/winemodel/winemodel`
 
 ```bash
 uvicorn api.main:app --reload
@@ -128,7 +128,7 @@ uvicorn api.main:app --reload
 
 #### Checking endpoints
 
-1. Access `http://127.0.0.1:8000/`, you will see a message like this `"Mobile classifier is all ready to go!"`
+1. Access `http://127.0.0.1:8000/`, you will see a message like this `"Wine model Random Forest C. is all ready!"`
 2. Access `http://127.0.0.1:8000/docs`, the browser will display something like this:
 
 ![1691989585111](image/README/1691989585111.png)
