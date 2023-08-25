@@ -133,6 +133,10 @@ uvicorn api.main:app --reload
 1. Access `http://127.0.0.1:8000/`, you will see a message like this `"Wine model Random Forest C. is all ready!"`
 2. Access `http://127.0.0.1:8000/docs`, the browser will display something like this:
 
+![Texto alternativo](https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/Fast_api.png)
+     ```
+
+
 https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/Fast_api.png
 
 
