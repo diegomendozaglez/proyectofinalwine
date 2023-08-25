@@ -216,10 +216,10 @@ Try running the following predictions with the endpoint by writing the following
 
 #### Run Mobile PC REST API
 
-1. Run the next command to start the `mobilepc-image` image in a container.
+1. Run the next command to start the `winemodel-image` image in a container.
 
    ```bash
-   docker run -d --rm --name mobilepc-c -p 8000:8000 mobilepc-image
+   docker run -d --rm --name winemodel-c -p 8000:8000 winemodel-image
    ```
 2. Check the container running.
 
@@ -428,7 +428,7 @@ docker network create AIservice
 
 4. Try running the following predictions with the endpoint by writing the following values:
 
-* **Prediction 1**Request body
+* **Prediction 1**Request
 
   ```bash
   {
@@ -447,14 +447,14 @@ docker network create AIservice
   }
   ```
 
-  Response body
+  Response
   The output will be:
 
   ```bash
   "Predicted Price Range: [2]"
   ```
 * **Prediction 2**
-  Request body
+  Request
 
   ```bash
   {
@@ -477,7 +477,7 @@ docker network create AIservice
   The output will be:
 
   ```
-  "Predicted Price Range: [1]"
+  "Predicted Wine Quality: [1]"
   ```
 
 #### Opening the logs in Frontend
@@ -499,8 +499,8 @@ Open a new terminal, and execute the following commands:
 
    ```bash
    INFO: 2023-08-23 05:02:57,993|main|Front-end is all ready to go!
-   DEBUG: 2023-08-23 05:04:30,195|main|Incoming input in the front end: {'battery_power': 976.0, 'blue': 0.0, 'clock_speed': 2.0, 'dual_sim': 0.0, 'fc': 0.0, 'four_g': 1.0, 'int_memory': 5.0, 'm_dep': 0.9, 'mobile_wt': 184.0, 'n_cores': 7.0, 'pc': 14.0, 'px_height': 496.0, 'px_width': 797.0, 'ram': 3261.0, 'sc_h': 8.0, 'sc_w': 2.0, 'talk_time': 6.0, 'three_g': 1.0, 'touch_screen': 1.0, 'wifi': 1.0, 'price_range': 2.0}
-   DEBUG: 2023-08-23 05:04:30,894|main|Prediction: "Predicted Price Range: [2]"
+   DEBUG: 2023-08-23 05:04:30,195|main|Incoming input in the front end: {'fixed_acidity': 925.0, 'volatile_acidity': 3.0, 'clock_speed': 2.0, 'citric_acid': 5.0, 'residual_sugar': 0.0, 'chlorides': 2.0, 'free_sulfur_dioxide': 7.0, 'total_sulfur_dioxide': 0.8, 'density': 214.0, 'pH': 9.0, 'sulphates': 14.0,'alcohol': 367.0}
+   DEBUG: 2023-08-23 05:04:30,894|main|Prediction: "Predicted Wine Quality: [2]"
    INFO: 2023-08-23 05:04:43,166|main|Checking health: "Wine Random Forest classifier is all ready!"
    INFO: 2023-08-23 05:04:45,428|main|Checking health: "Wine Random Forest classifier is all ready!"
    INFO: 2023-08-23 05:04:49,815|main|Checking health: "Wine Random Forest classifier is all ready!"
@@ -513,7 +513,7 @@ Open a new terminal, and execute the following commands:
 1. Copy the `app` logs to the root folder:
 
    ```bash
-   docker cp mobilepc-app-1:/main_api.log .
+   docker cp modelwine-app-1:/main_api.log .
    ```
 
    Output:
@@ -525,9 +525,9 @@ Open a new terminal, and execute the following commands:
 
    ```bash
    2023-08-23 05:04:30,891:main:main:INFO:Predicted result: [2]
-   2023-08-23 05:04:43,161:main:main:INFO:Mobile classifier is all ready to go!
-   2023-08-23 05:04:45,425:main:main:INFO:Mobile classifier is all ready to go!
-   2023-08-23 05:04:49,813:main:main:INFO:Mobile classifier is all ready to go!
+   2023-08-23 05:04:43,161:main:main:INFO:Random Forest Classifier is all ready!
+   2023-08-23 05:04:45,425:main:main:INFO:Random Forest Classifier is all ready to go!
+   2023-08-23 05:04:49,813:main:main:INFO:Random Forest Classifier is all ready to go!
    ```
 
 ### Delete the containers with Docker Compose
@@ -535,20 +535,20 @@ Open a new terminal, and execute the following commands:
 1. Stop the containers that have previously been launched with `docker-compose up`.
 
    ```bash
-   docker-compose -f mobilepc/mobilepc/docker-compose.yml stop 
+   docker-compose -f modelwine/modelwine/docker-compose.yml stop 
    ```
 
    Output:
 
    ```bash
    [+] Stopping 2/2
-    ✔ Container mobilepc-frontend-1  Stopped   
-    ✔ Container mobilepc-app-1       Stopped 
+    ✔ Container modelwine-frontend-1  Stopped   
+    ✔ Container modelwine-app-1       Stopped 
    ```
 2. Delete the containers stopped from the stage.
 
    ```bash
-   docker-compose -f mobilepc/mobilepc/docker-compose.yml rm
+   docker-compose -f proyectofinalwine/winequality_model/docker-compose.yml rm
    ```
 
    Output:
@@ -556,23 +556,23 @@ Open a new terminal, and execute the following commands:
    ```bash
    ? Going to remove mobilepc-frontend-1, mobilepc-app-1 Yes
    [+] Removing 2/0
-    ✔ Container mobilepc-frontend-1  Removed   
-    ✔ Container mobilepc-app-1       Removed   
+    ✔ Container modelwine-frontend-1  Removed   
+    ✔ Container modelwine-app-1       Removed   
    ```
 3. Delete the image
 
    ```bash
-   docker rmi mobilepc-frontend
-   docker rmi mobilepc-app
+   docker rmi modelwine-frontend
+   docker rmi modelwine-app
    ```
 
    Output:
 
 ```bash
-Untagged: mobilepc-frontend:latest
+Untagged: modelwine-frontend:latest
 Deleted: sha256:cad7ed656a014cb6656ad8749b203ea216be903cc4e051af3cdc3997b7ecf2c0
 
-Untagged: mobilepc-app:latest
+Untagged: modelwine-app:latest
 Deleted: sha256:fa054a5b48a475eb0589950d42d5323b4e43607f89e4b006bbd1a33e472e364b
 ```
 
