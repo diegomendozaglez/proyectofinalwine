@@ -28,6 +28,6 @@ class wine(BaseModel):
     free_sulfur_dioxide": float
     total_sulfur_dioxide": float
     density: float
-    pH": float
+    pH: float
     sulphates: float
     alcohol: float
