@@ -137,7 +137,7 @@ uvicorn api.main:app --reload
 
 Try running the following predictions with the endpoint by writing the following values:
 
-* **Prediction 1**Request body
+* **Prediction 1**Request
 
   ```bash
   {
@@ -160,51 +160,36 @@ Try running the following predictions with the endpoint by writing the following
   The output will be:
 
   ```bash
-  "Predicted Price Range: [2]"
+  "Predicted Quality: [2]"
   ```
 * **Prediction 2**
-  Request body
+  Request 
 
   ```bash
   {
-  "battery_power": 559.0,
-   "blue": 1.0,
-   "clock_speed": 0.5,
-   "dual_sim": 1.0,
-   "fc": 0.0,
-   "four_g": 1.0,
-   "int_memory": 24.0,
-   "m_dep": 0.8,
-   "mobile_wt": 103.0,
-   "n_cores": 4.0,
-   "pc": 5.0,
-   "px_height": 537.0,
-   "px_width": 627.0,
-   "ram": 2023.0,
-   "sc_h": 14.0,
-   "sc_w": 1.0,
-   "talk_time": 2.0,
-   "three_g": 1.0,
-   "touch_screen": 0.0,
-   "wifi": 0.0,
-   "price_range": 1.0
+   "fixed_acidity": 234.0,
+   "volatile_acidity": 5.0,
+   "clock_speed": 8.0,
+   "citric_acid": 6.0,
+   "residual_sugar": 1.0,
+   "chlorides": 3.0,
+   "free_sulfur_dioxide": 6.0,
+   "total_sulfur_dioxide": 0.9,
+   "density": 158.0,
+   "pH": 8.0,
+   "sulphates": 10.0,
+   "alcohol": 322.0,
   }
   ```
 
-  Response body
+  Response 
   The output will be:
 
   ```
-  "Predicted Price Range: [1]"
+  "Predicted Quality: [1]"
   ```
 
 ### Training model
-
-You can also ask the API to train a model trouhg the `/train-model` endpoint, just clicking to execute:
-
-![1691990047775](image/README/1691990047775.png)
-
-If everything is ok, it will reponse back with a `message` and a `reponse_text` as you can see in the picture above, in the `reponse body`.
 
 ### Individual deployment of the API with Docker and usage
 
@@ -214,7 +199,7 @@ If everything is ok, it will reponse back with a `message` and a `reponse_text` 
 * Run the following code to build the image:
 
   ```bash
-  docker build -t mobilepc-image ./mobilepc/mobilepc/app/
+  docker build -t mobilepc-image ./proyectofinaliwine/winequality_model/app/
   ```
 * Inspect the image created by running this command:
 
@@ -226,7 +211,7 @@ If everything is ok, it will reponse back with a `message` and a `reponse_text` 
 
   ```bash
   REPOSITORY               TAG       IMAGE ID       CREATED          SIZE
-  mobilepc-image           latest    0f8ff6731ab7   31 seconds ago   829MB
+  winemodel-image           latest    0f8ff6731ab7   45 seconds ago   608MB
   ```
 
 #### Run Mobile PC REST API
@@ -245,13 +230,13 @@ If everything is ok, it will reponse back with a `message` and a `reponse_text` 
    Output:
 
    ```bash
-   CONTAINER ID   IMAGE            COMMAND                  CREATED              STATUS              PORTS                    NAMES
-   9e9f86198476   mobilepc-image   "uvicorn main:app --…"   About a minute ago   Up About a minute   0.0.0.0:8000->8000/tcp   mobilepc-c
+   CONTAINER ID   IMAGE             COMMAND                   CREATED               STATUS               PORTS                     NAMES
+   9e9f86198476   winemodel-image   "uvicorn main:app --…"   About a minute ago   Up About a minute   0.0.0.0:8000->8000/tcp   winemodel-c
    ```
 
 #### Checking endpoints for app
 
-1. Access `http://127.0.0.1:8000/`, and you will see a message like this `"Mobile classifier is all ready to go!"`
+1. Access `http://127.0.0.1:8000/`, and you will see a message like this `"Random Forest Classificator is all ready!"`
 2. A file called `main_api.log` will be created automatically inside the container. We will inspect it below.
 3. Access `http://127.0.0.1:8000/docs`, the browser will display something like this:
 
