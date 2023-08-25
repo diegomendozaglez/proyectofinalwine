@@ -10,6 +10,8 @@ When choosing wine in a store, we evaluate only the appearance of the bottle, wh
 
 The quality of wine is its normative indicator for chemical composition, color, saturation, aroma and taste.
 
+https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/DvEs.gif
+
 ## Overall analysis and results
 
 The problem that is addressed is to predict the quality of the wine using the data provided. Knowing that there are many wines of normal, excellent and bad quality. And the solution (notebook) it can find in the next link: https://github.com/diegomendozaglez/proyectofinalwine/blob/main/notebook/NotebookWine1.ipynb
