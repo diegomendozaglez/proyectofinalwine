@@ -152,7 +152,7 @@ Try running the following predictions with the endpoint by writing the following
    "density": 214.0,
    "pH": 9.0,
    "sulphates": 14.0,
-   "alcohol": 367.0,
+   "alcohol": 367.0
   }
   ```
 
@@ -178,7 +178,7 @@ Try running the following predictions with the endpoint by writing the following
    "density": 158.0,
    "pH": 8.0,
    "sulphates": 10.0,
-   "alcohol": 322.0,
+   "alcohol": 322.0
   }
   ```
 
@@ -248,27 +248,18 @@ Try running the following predictions with the endpoint by writing the following
 
   ```bash
   {
-  "battery_power": 976.0,
-   "blue": 0.0,
+   "fixed_acidity": 925.0,
+   "volatile_acidity": 3.0,
    "clock_speed": 2.0,
-   "dual_sim": 0.0,
-   "fc": 0.0,
-   "four_g": 1.0,
-   "int_memory": 5.0,
-   "m_dep": 0.9,
-   "mobile_wt": 184.0,
-   "n_cores": 7.0,
-   "pc": 14.0,
-   "px_height": 496.0,
-   "px_width": 797.0,
-   "ram": 3261.0,
-   "sc_h": 8.0,
-   "sc_w": 2.0,
-   "talk_time": 6.0,
-   "three_g": 1.0,
-   "touch_screen": 1.0,
-   "wifi": 1.0,
-   "price_range": 2.0
+   "citric_acid": 5.0,
+   "residual_sugar": 0.0,
+   "chlorides": 2.0,
+   "free_sulfur_dioxide": 7.0,
+   "total_sulfur_dioxide": 0.8,
+   "density": 214.0,
+   "pH": 9.0,
+   "sulphates": 14.0,
+   "alcohol": 367.0
   }
   ```
 
@@ -283,27 +274,18 @@ Try running the following predictions with the endpoint by writing the following
 
   ```bash
   {
-  "battery_power": 559.0,
-   "blue": 1.0,
-   "clock_speed": 0.5,
-   "dual_sim": 1.0,
-   "fc": 0.0,
-   "four_g": 1.0,
-   "int_memory": 24.0,
-   "m_dep": 0.8,
-   "mobile_wt": 103.0,
-   "n_cores": 4.0,
-   "pc": 5.0,
-   "px_height": 537.0,
-   "px_width": 627.0,
-   "ram": 2023.0,
-   "sc_h": 14.0,
-   "sc_w": 1.0,
-   "talk_time": 2.0,
-   "three_g": 1.0,
-   "touch_screen": 0.0,
-   "wifi": 0.0,
-   "price_range": 1.0
+   "fixed_acidity": 234.0,
+   "volatile_acidity": 5.0,
+   "clock_speed": 8.0,
+   "citric_acid": 6.0,
+   "residual_sugar": 1.0,
+   "chlorides": 3.0,
+   "free_sulfur_dioxide": 6.0,
+   "total_sulfur_dioxide": 0.9,
+   "density": 158.0,
+   "pH": 8.0,
+   "sulphates": 10.0,
+   "alcohol": 322.0
   }
   ```
 
@@ -336,8 +318,8 @@ Try running the following predictions with the endpoint by writing the following
    Output:
 
    ```bash
-   Dockerfile  __init__.py  bin   data  etc   lib    lib64   main.py       media  mobilepc.py         models     opt        preprocess  requirements.txt  run   srv  tmp    usr
-   README.md   __pycache__  boot  dev   home  lib32  libx32  main_api.log  mnt    mobilepc_train.log  models_ml  predictor  proc        root              sbin  sys  train  var
+   Dockerfile  __init__.py  bin   data  etc   lib    lib64   main.py       media  modelwine.py         models     opt        preprocess  requirements.txt  run   srv  tmp    usr
+   README.md   __pycache__  boot  dev   home  lib32  libx32  main_api.log  mnt    modelwine_train.log  models_ml  predictor  proc        root              sbin  sys  train  var
    ```
 3. Open the file `main_api.log` and inspect the logs with this command:
 
@@ -348,9 +330,9 @@ Try running the following predictions with the endpoint by writing the following
    Output:
 
    ```log
-   2023-08-23 04:38:20,132:main:main:INFO:Mobile classifier is all ready to go!
+   2023-08-23 04:38:20,132:main:main:INFO:Random Forest Classificator Classifier is all ready!
    2023-08-23 04:39:40,283:main:main:INFO:Predicted result: [2]
-   2023-08-23 04:39:50,628:main:main:INFO:Succesfully runned: {'message': 'Model training script executed successfully', 'response_text': 'test precision: 0.9531958019921128\ntest accuracy: 0.9525\nModel saved in models_ml/SVM_output.pkl\n'}
+   2023-08-23 04:39:50,628:main:main:INFO:Succesfully runned: {'message': 'Model training script executed successfully', 'response_text': 'test precision: 0.9531958019921128\ntest accuracy: 0.9525\nModel saved in models_ml/random_forest.pkl\n'}
    2023-08-23 04:39:54,686:main:main:INFO:Predicted result: [2]
    2023-08-23 04:41:08,035:main:main:INFO:Predicted result: [2]
 
@@ -358,13 +340,13 @@ Try running the following predictions with the endpoint by writing the following
 4. Copy the logs to the root folder:
 
    ```bash
-   docker cp mobilepc-c:/main_api.log .
+   docker cp modelwine-c:/main_api.log .
    ```
 
    Output:
 
    ```bash
-   Successfully copied 2.05kB to ...\mlops-mobilepc\.
+   Successfully copied 2.05kB to ...\mlops-modelwine\.
    ```
 
 #### Delete container and image
@@ -372,7 +354,7 @@ Try running the following predictions with the endpoint by writing the following
 * Stop the container:
 
   ```bash
-  docker stop mobilepc-c
+  docker stop modelwine-c
   ```
 * Verify it was deleted
 
@@ -388,7 +370,7 @@ Try running the following predictions with the endpoint by writing the following
 * Delete the image
 
   ```bash
-  docker rmi mobilepc-image
+  docker rmi modelwine-image
   ```
 
   Output:
@@ -422,18 +404,18 @@ docker network create AIservice
    ✔ Container mobilepc-app-1       Created                                                                                                                                                                           0.2s 
    ✔ Container mobilepc-frontend-1  Created                                                                                                                                                                           0.0s 
   Attaching to mobilepc-app-1, mobilepc-frontend-1
-  mobilepc-app-1       | INFO:     Will watch for changes in these directories: ['/']
-  mobilepc-app-1       | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-  mobilepc-app-1       | INFO:     Started reloader process [1] using StatReload
-  mobilepc-frontend-1  | INFO:     Will watch for changes in these directories: ['/']
-  mobilepc-frontend-1  | INFO:     Uvicorn running on http://0.0.0.0:3000 (Press CTRL+C to quit)
-  mobilepc-frontend-1  | INFO:     Started reloader process [1] using StatReload
-  mobilepc-app-1       | INFO:     Started server process [7]
-  mobilepc-app-1       | INFO:     Waiting for application startup.
-  mobilepc-app-1       | INFO:     Application startup complete.
-  mobilepc-frontend-1  | INFO:     Started server process [8]
-  mobilepc-frontend-1  | INFO:     Waiting for application startup.
-  mobilepc-frontend-1  | INFO:     Application startup complete.
+  modelwine-app-1       | INFO:     Will watch for changes in these directories: ['/']
+  modelwine-app-1       | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+  modelwine-app-1       | INFO:     Started reloader process [1] using StatReload
+  modelwine-frontend-1  | INFO:     Will watch for changes in these directories: ['/']
+  modelwine-frontend-1  | INFO:     Uvicorn running on http://0.0.0.0:3000 (Press CTRL+C to quit)
+  modelwine-frontend-1  | INFO:     Started reloader process [1] using StatReload
+  modelwine-app-1       | INFO:     Started server process [7]
+  modelwine-app-1       | INFO:     Waiting for application startup.
+  modelwine-app-1       | INFO:     Application startup complete.
+  modelwine-frontend-1  | INFO:     Started server process [8]
+  modelwine-frontend-1  | INFO:     Waiting for application startup.
+  modelwine-frontend-1  | INFO:     Application startup complete.
   ```
 
 #### Checking endpoints in Frontend
@@ -450,27 +432,18 @@ docker network create AIservice
 
   ```bash
   {
-  "battery_power": 976.0,
-   "blue": 0.0,
+   "fixed_acidity": 925.0,
+   "volatile_acidity": 3.0,
    "clock_speed": 2.0,
-   "dual_sim": 0.0,
-   "fc": 0.0,
-   "four_g": 1.0,
-   "int_memory": 5.0,
-   "m_dep": 0.9,
-   "mobile_wt": 184.0,
-   "n_cores": 7.0,
-   "pc": 14.0,
-   "px_height": 496.0,
-   "px_width": 797.0,
-   "ram": 3261.0,
-   "sc_h": 8.0,
-   "sc_w": 2.0,
-   "talk_time": 6.0,
-   "three_g": 1.0,
-   "touch_screen": 1.0,
-   "wifi": 1.0,
-   "price_range": 2.0
+   "citric_acid": 5.0,
+   "residual_sugar": 0.0,
+   "chlorides": 2.0,
+   "free_sulfur_dioxide": 7.0,
+   "total_sulfur_dioxide": 0.8,
+   "density": 214.0,
+   "pH": 9.0,
+   "sulphates": 14.0,
+   "alcohol": 367.0
   }
   ```
 
@@ -485,27 +458,18 @@ docker network create AIservice
 
   ```bash
   {
-  "battery_power": 559.0,
-   "blue": 1.0,
-   "clock_speed": 0.5,
-   "dual_sim": 1.0,
-   "fc": 0.0,
-   "four_g": 1.0,
-   "int_memory": 24.0,
-   "m_dep": 0.8,
-   "mobile_wt": 103.0,
-   "n_cores": 4.0,
-   "pc": 5.0,
-   "px_height": 537.0,
-   "px_width": 627.0,
-   "ram": 2023.0,
-   "sc_h": 14.0,
-   "sc_w": 1.0,
-   "talk_time": 2.0,
-   "three_g": 1.0,
-   "touch_screen": 0.0,
-   "wifi": 0.0,
-   "price_range": 1.0
+   "fixed_acidity": 234.0,
+   "volatile_acidity": 5.0,
+   "clock_speed": 8.0,
+   "citric_acid": 6.0,
+   "residual_sugar": 1.0,
+   "chlorides": 3.0,
+   "free_sulfur_dioxide": 6.0,
+   "total_sulfur_dioxide": 0.9,
+   "density": 158.0,
+   "pH": 8.0,
+   "sulphates": 10.0,
+   "alcohol": 322.0
   }
   ```
 
@@ -523,13 +487,13 @@ Open a new terminal, and execute the following commands:
 1. Copy the `frontend` logs to the root folder:
 
    ```bash
-   docker cp mobilepc-frontend-1:/frontend.log .
+   docker cp modelwine-frontend-1:/frontend.log .
    ```
 
    Output:
 
    ```bash
-   Successfully copied 2.56kB to ...\mlops-mobilepc\.
+   Successfully copied 2.56kB to ...\mlops-modelwine\.
    ```
 2. You can inspect the logs and see something similar to this:
 
@@ -537,9 +501,9 @@ Open a new terminal, and execute the following commands:
    INFO: 2023-08-23 05:02:57,993|main|Front-end is all ready to go!
    DEBUG: 2023-08-23 05:04:30,195|main|Incoming input in the front end: {'battery_power': 976.0, 'blue': 0.0, 'clock_speed': 2.0, 'dual_sim': 0.0, 'fc': 0.0, 'four_g': 1.0, 'int_memory': 5.0, 'm_dep': 0.9, 'mobile_wt': 184.0, 'n_cores': 7.0, 'pc': 14.0, 'px_height': 496.0, 'px_width': 797.0, 'ram': 3261.0, 'sc_h': 8.0, 'sc_w': 2.0, 'talk_time': 6.0, 'three_g': 1.0, 'touch_screen': 1.0, 'wifi': 1.0, 'price_range': 2.0}
    DEBUG: 2023-08-23 05:04:30,894|main|Prediction: "Predicted Price Range: [2]"
-   INFO: 2023-08-23 05:04:43,166|main|Checking health: "Mobile classifier is all ready to go!"
-   INFO: 2023-08-23 05:04:45,428|main|Checking health: "Mobile classifier is all ready to go!"
-   INFO: 2023-08-23 05:04:49,815|main|Checking health: "Mobile classifier is all ready to go!"
+   INFO: 2023-08-23 05:04:43,166|main|Checking health: "Wine Random Forest classifier is all ready!"
+   INFO: 2023-08-23 05:04:45,428|main|Checking health: "Wine Random Forest classifier is all ready!"
+   INFO: 2023-08-23 05:04:49,815|main|Checking health: "Wine Random Forest classifier is all ready!"
    ```
 
 #### Opening the logs in App
