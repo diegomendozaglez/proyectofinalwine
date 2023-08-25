@@ -30,7 +30,7 @@ The problem that is addressed is to predict the quality of the wine using the da
 * Install the other libraries
   Run the following command to install the libraries/packages.
   ```bash
-  py -m pip install -r ./mlops-mobilepc/winemodel/requirements_dev.txt
+  py -m pip install -r ./mlops-winemodel/winemodel/requirements_dev.txt
   ```
 
 ### For Windows users:
@@ -60,7 +60,7 @@ The problem that is addressed is to predict the quality of the wine using the da
 
 ## Pytest (Unit test)
 
-You can reproduce the unit test through the [test module](mobilepc/tests), following the next steps:
+Steps:
 
 ### Virtual environment
 
@@ -90,11 +90,11 @@ Follow the next steps to run the test.
 
 * Change the directory and run the following command:
   ```bash
-  cd /mobilepc
+  cd /winemodel
   ```
 * Then run:
   ```bash
-  pytest ./tests/test_mobilepc.py -v
+  pytest ./tests/test_winemodel.py -v
   ```
 * You should see the following data output:
   ```
