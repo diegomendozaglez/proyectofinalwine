@@ -4,6 +4,8 @@ Repository for Wine Model Clasiffication proyect.
 
 ## Problem context:
 
+## Problem context:
+
 Dishonest manufacturers have learned to dispense a mixture of water, sugar, aniline dye and citric acid from grape wine. It is very difficult to recognize a fake, not unique suitable verification methods. I will tell you how to determine the quality of wine in accessible ways.
 
 When choosing wine in a store, we evaluate only the appearance of the bottle, which does not always save us from counterfeiting. Now you can fake a bottle and a label of a wine company even in the basement. The similarity with the original will be one hundred percent. when this value is selected, the quality of the wine is excluded due to appearance. The wine must be tasted before serving.
