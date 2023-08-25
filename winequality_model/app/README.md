@@ -219,7 +219,7 @@ Try running the following predictions with the endpoint by writing the following
 
   ```bash
   REPOSITORY               TAG       IMAGE ID       CREATED          SIZE
-  winemodel-image           latest    0f8ff6731ab7   45 seconds ago   608MB
+  winemodel-image           latest    0r8ti6231ac4   45 seconds ago   608MB
   ```
 
 #### Run Mobile PC REST API
@@ -239,7 +239,7 @@ Try running the following predictions with the endpoint by writing the following
 
    ```bash
    CONTAINER ID   IMAGE             COMMAND                   CREATED               STATUS               PORTS                     NAMES
-   9e9f86198476   winemodel-image   "uvicorn main:app --…"   About a minute ago   Up About a minute   0.0.0.0:8000->8000/tcp   winemodel-c
+   6e2f57198385   winemodel-image   "uvicorn main:app --…"   About a minute ago   Up About a minute   0.0.0.0:8000->8000/tcp   winemodel-c
    ```
 
 #### Checking endpoints for app
@@ -338,11 +338,11 @@ Try running the following predictions with the endpoint by writing the following
    Output:
 
    ```log
-   2023-08-23 04:38:20,132:main:main:INFO:Random Forest Classificator Classifier is all ready!
-   2023-08-23 04:39:40,283:main:main:INFO:Predicted result: [2]
-   2023-08-23 04:39:50,628:main:main:INFO:Succesfully runned: {'message': 'Model training script executed successfully', 'response_text': 'test precision: 0.9531958019921128\ntest accuracy: 0.9525\nModel saved in models_ml/random_forest.pkl\n'}
-   2023-08-23 04:39:54,686:main:main:INFO:Predicted result: [2]
-   2023-08-23 04:41:08,035:main:main:INFO:Predicted result: [2]
+   2023-08-24 02:22:17,527:main:main:INFO:Random Forest Classificator Classifier is all ready!
+   2023-08-24 02:23:47,835:main:main:INFO:Predicted result: [2]
+   2023-08-24 02:23:40,973:main:main:INFO:Succesfully runned: {'message': 'Model training script executed successfully', 'response_text': 'test precision: 0.84231940\ntest accuracy: 0.9525\nModel saved in models_ml/random_forest.pkl\n'}
+   2023-08-24 02:24:54,624:main:main:INFO:Predicted result: [2]
+   2023-08-24 02:25:08,842:main:main:INFO:Predicted result: [2]
 
    ```
 4. Copy the logs to the root folder:
