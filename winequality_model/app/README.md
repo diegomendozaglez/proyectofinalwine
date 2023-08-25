@@ -118,7 +118,7 @@ Follow the next steps to run the test.
 
 ### Individual Fastapi and Use Deployment
 
-Run the next command to start the Mobile Price API locally:
+Run the next command to start the Wine Queality API locally:
 
 > Remember to change up you directory to `mlops-winemodel/winemodel/winemodel`
 
@@ -141,27 +141,18 @@ Try running the following predictions with the endpoint by writing the following
 
   ```bash
   {
-  "battery_power": 976.0,
-   "blue": 0.0,
+   "fixed_acidity": 925.0,
+   "volatile_acidity": 3.0,
    "clock_speed": 2.0,
-   "dual_sim": 0.0,
-   "fc": 0.0,
-   "four_g": 1.0,
-   "int_memory": 5.0,
-   "m_dep": 0.9,
-   "mobile_wt": 184.0,
-   "n_cores": 7.0,
-   "pc": 14.0,
-   "px_height": 496.0,
-   "px_width": 797.0,
-   "ram": 3261.0,
-   "sc_h": 8.0,
-   "sc_w": 2.0,
-   "talk_time": 6.0,
-   "three_g": 1.0,
-   "touch_screen": 1.0,
-   "wifi": 1.0,
-   "price_range": 2.0
+   "citric_acid": 5.0,
+   "residual_sugar": 0.0,
+   "chlorides": 2.0,
+   "free_sulfur_dioxide": 7.0,
+   "total_sulfur_dioxide": 0.8,
+   "density": 214.0,
+   "pH": 9.0,
+   "sulphates": 14.0,
+   "alcohol": 367.0,
   }
   ```
 
