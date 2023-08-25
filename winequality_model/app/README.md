@@ -690,6 +690,5 @@ Here you will find information about this project and more.
 
   * **Development Lead**
 
-    * Irad Olivares <irad.olriv@gmail.com>
-    * [LinkedIn](https://www.linkedin.com/in/irad-olivares-rivas-1a0878128/)
-* **Contributors**
+    * Irad Olivares <a01688735@tec.mx>
+    * [LinkedIn](https://www.linkedin.com/in/diego-mendoza-4348101a3/)
