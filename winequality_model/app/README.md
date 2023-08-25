@@ -1,4 +1,4 @@
-# mlops-mobilepc
+# Proyect:
 
 Repository for Wine Model Clasiffication proyect.
 
