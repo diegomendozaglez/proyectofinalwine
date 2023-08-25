@@ -208,13 +208,6 @@ Try running the following predictions with the endpoint by writing the following
 
 ### Individual deployment of the API with Docker and usage
 
-#### Build the image
-
-* Ensure you are in the `mlops-mobilepc/` directory (root folder).
-* Run the following code to build the image:
-
-  ```bash
-  docker build -t mobilepc-image ./proyectofinaliwine/winequality_model/app/
   ```
 * Inspect the image created by running this command:
 
