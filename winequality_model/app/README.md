@@ -679,14 +679,11 @@ Here you will find information about this project and more.
 
 ### Information sources
 
-* You can find the data needed for this proyect in [Kaggle public repository](https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification).
+There is a total of 273 notebooks already developed in relation to this dataset, attached the link of the top 3 of the most voted:
+
+https://www.kaggle.com/code/georgyzubkov/wine-quality-exploratory-data-analysis-ml https://www.kaggle.com/code/jcaliz/ps-s03e05-a-complete-eda https://www.kaggle.com/code/qusaybtoush1990/wine-quality
 
 ## Contact information
-
-* **Credits**
-
-  ---
-
 
   * **Development Lead**
 
