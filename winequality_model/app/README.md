@@ -432,7 +432,7 @@ docker network create AIservice
 2. A file called `frontend.log` will be created automatically inside the container. We will inspect it below.
 3. Access `http://127.0.0.1:3000/docs`, the browser will display something like this:
 
-![1692767028288](image/README/1692767028288.png)
+![Texto alternativo](https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/FastApi2.PNG)
 
 4. Try running the following predictions with the endpoint by writing the following values:
 
@@ -508,10 +508,10 @@ Open a new terminal, and execute the following commands:
    ```bash
    INFO: 2023-08-23 05:02:57,993|main|Front-end is all ready to go!
    DEBUG: 2023-08-23 05:04:30,195|main|Incoming input in the front end: {'fixed_acidity': 925.0, 'volatile_acidity': 3.0, 'clock_speed': 2.0, 'citric_acid': 5.0, 'residual_sugar': 0.0, 'chlorides': 2.0, 'free_sulfur_dioxide': 7.0, 'total_sulfur_dioxide': 0.8, 'density': 214.0, 'pH': 9.0, 'sulphates': 14.0,'alcohol': 367.0}
-   DEBUG: 2023-08-23 05:04:30,894|main|Prediction: "Predicted Wine Quality: [2]"
-   INFO: 2023-08-23 05:04:43,166|main|Checking health: "Wine Random Forest classifier is all ready!"
-   INFO: 2023-08-23 05:04:45,428|main|Checking health: "Wine Random Forest classifier is all ready!"
-   INFO: 2023-08-23 05:04:49,815|main|Checking health: "Wine Random Forest classifier is all ready!"
+   DEBUG: 2023-08-24 03:25:32,894|main|Prediction: "Predicted Wine Quality: [2]"
+   INFO: 2023-08-24 03:25:45,166|main|Checking health: "Wine Random Forest classifier is all ready!"
+   INFO: 2023-08-24 03:25:48,428|main|Checking health: "Wine Random Forest classifier is all ready!"
+   INFO: 2023-08-24 03:25:51,815|main|Checking health: "Wine Random Forest classifier is all ready!"
    ```
 
 #### Opening the logs in App
@@ -532,10 +532,10 @@ Open a new terminal, and execute the following commands:
 2. You can inspect the logs and see something similar to this:
 
    ```bash
-   2023-08-23 05:04:30,891:main:main:INFO:Predicted result: [2]
-   2023-08-23 05:04:43,161:main:main:INFO:Random Forest Classifier is all ready!
-   2023-08-23 05:04:45,425:main:main:INFO:Random Forest Classifier is all ready to go!
-   2023-08-23 05:04:49,813:main:main:INFO:Random Forest Classifier is all ready to go!
+   2023-08-24 03:26:40,891:main:main:INFO:Predicted result: [2]
+   2023-08-24 03:26:46,161:main:main:INFO:Random Forest Classifier is all ready!
+   2023-08-24 03:26:47,425:main:main:INFO:Random Forest Classifier is all ready to go!
+   2023-08-24 03:26:48,813:main:main:INFO:Random Forest Classifier is all ready to go!
    ```
 
 ### Delete the containers with Docker Compose
