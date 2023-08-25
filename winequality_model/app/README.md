@@ -1,6 +1,12 @@
-# Proyect:
+# Proyect Model Wine:
 
-Repository for Wine Model Clasiffication proyect.
+This is a Repository for Wine Model Clasiffication proyect.
+
+# Data set description:
+
+This data set is related to the red variants of the Portuguese wine "Vinho Verde". The data set describes the amount of various chemicals present in wine and their effect on its quality.
+
+![Texto alternativo](https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/Captura-de-pantalla-2021-05-08-a-las-23.27.15.png)
 
 ## Problem context:
 
@@ -12,7 +18,6 @@ The quality of wine is its normative indicator for chemical composition, color, 
 
 ![Texto alternativo](https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/DvEs.gif)
 
-https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/DvEs.gif
 
 ## Overall analysis and results
 
