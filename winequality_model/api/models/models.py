@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class Mobile(BaseModel):
+class wine(BaseModel):
     """
     Represents a mobile phone with various attributes.
 
