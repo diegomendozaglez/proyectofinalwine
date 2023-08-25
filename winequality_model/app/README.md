@@ -248,7 +248,7 @@ Try running the following predictions with the endpoint by writing the following
 2. A file called `main_api.log` will be created automatically inside the container. We will inspect it below.
 3. Access `http://127.0.0.1:8000/docs`, the browser will display something like this:
 
-![1692764506005](image/README/1692764506005.png)
+![Texto alternativo](https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/FastApi2.PNG)
 
 4. Try running the following predictions with the endpoint by writing the following values:
 
@@ -432,7 +432,7 @@ docker network create AIservice
 2. A file called `frontend.log` will be created automatically inside the container. We will inspect it below.
 3. Access `http://127.0.0.1:3000/docs`, the browser will display something like this:
 
-![Texto alternativo](https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/FastApi2.PNG)
+![Texto alternativo](https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/MM.png)
 
 4. Try running the following predictions with the endpoint by writing the following values:
 
