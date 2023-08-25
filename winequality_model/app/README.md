@@ -662,6 +662,8 @@ There is a total of 273 notebooks already developed in relation to this dataset,
 
 https://www.kaggle.com/code/georgyzubkov/wine-quality-exploratory-data-analysis-ml https://www.kaggle.com/code/jcaliz/ps-s03e05-a-complete-eda https://www.kaggle.com/code/qusaybtoush1990/wine-quality
 
+![Texto alternativo](https://github.com/diegomendozaglez/proyectofinalwine/blob/main/imagenes/Captura.PNG)
+
 ## Contact information
 
   * **Development Lead**
