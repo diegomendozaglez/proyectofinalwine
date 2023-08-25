@@ -4,8 +4,6 @@ Repository for Wine Model Clasiffication proyect.
 
 ## Problem context:
 
-## Problem context:
-
 Dishonest manufacturers have learned to dispense a mixture of water, sugar, aniline dye and citric acid from grape wine. It is very difficult to recognize a fake, not unique suitable verification methods. I will tell you how to determine the quality of wine in accessible ways.
 
 When choosing wine in a store, we evaluate only the appearance of the bottle, which does not always save us from counterfeiting. Now you can fake a bottle and a label of a wine company even in the basement. The similarity with the original will be one hundred percent. when this value is selected, the quality of the wine is excluded due to appearance. The wine must be tasted before serving.
@@ -15,7 +13,6 @@ The quality of wine is its normative indicator for chemical composition, color, 
 ## Overall analysis and results
 
 The problem that is addressed is to predict the quality of the wine using the data provided. Knowing that there are many wines of normal, excellent and bad quality. And the solution (notebook) it can find in the next link: https://github.com/diegomendozaglez/proyectofinalwine/blob/main/notebook/NotebookWine1.ipynb
-
 
 ## Setup
 
@@ -33,12 +30,12 @@ The problem that is addressed is to predict the quality of the wine using the da
 * Install the other libraries
   Run the following command to install the libraries/packages.
   ```bash
-  py -m pip install -r ./mlops-mobilepc/mobilepc/requirements_dev.txt
+  py -m pip install -r ./mlops-mobilepc/winemodel/requirements_dev.txt
   ```
 
 ### For Windows users:
 
-* Change the directory to the `/mlops-mobilepc` folder.
+* Change the directory to the `/mlops-winemodel` folder.
 * Create a virtual environment with Python 3+:
 
   ```bash
@@ -53,7 +50,7 @@ The problem that is addressed is to predict the quality of the wine using the da
   Run the following command to install the libraries/packages.
 
   ```bash
-  pip install -r ./mlops-mobilepc/mobilepc/requirements_dev.txt
+  pip install -r ./mlops-mobilepc/winemodel/requirements_dev.txt
   ```
 
   > **NOTE**
