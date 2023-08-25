@@ -690,5 +690,5 @@ Here you will find information about this project and more.
 
   * **Development Lead**
 
-    * Irad Olivares <a01688735@tec.mx>
+    * Diego Alejandro Mendoza González, Correo TEC: <a01688735@tec.mx>
     * [LinkedIn](https://www.linkedin.com/in/diego-mendoza-4348101a3/)
