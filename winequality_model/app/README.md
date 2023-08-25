@@ -1,6 +1,6 @@
 # mlops-mobilepc
 
-Repository for Mobile Price Clasiffication proyect.
+Repository for Wine Model Clasiffication proyect.
 
 ## Problem context:
 
