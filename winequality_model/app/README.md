@@ -4,21 +4,16 @@ Repository for Wine Model Clasiffication proyect.
 
 ## Problem context:
 
-Bob, has taken the step of establishing his own mobile phone company. In his pursuit to challenge industry giants like Apple and Samsung, he recognizes the importance of accurately estimating the prices of his mobile phones. Aware of the fierce competition in the mobile phone market, Bob understands that informed decisions are crucial.
+Dishonest manufacturers have learned to dispense a mixture of water, sugar, aniline dye and citric acid from grape wine. It is very difficult to recognize a fake, not unique suitable verification methods. I will tell you how to determine the quality of wine in accessible ways.
 
-To address this challenge, we leverage the power of machine learning by analyzing sales data from various mobile phone companies.
+When choosing wine in a store, we evaluate only the appearance of the bottle, which does not always save us from counterfeiting. Now you can fake a bottle and a label of a wine company even in the basement. The similarity with the original will be one hundred percent. when this value is selected, the quality of the wine is excluded due to appearance. The wine must be tasted before serving.
 
-Bob's goal is to unveil meaningful relationships between a mobile phone's attributes—such as RAM, internal memory, and more—and its corresponding selling price.
-
-Because of that, this model will predict the price range of mobile phones, providing Bob with valuable insights into how different characteristics of a phone influence its potential price.
-
-Contained within this repository is a foundational model that serves as a starting point for addressing this challenge.
-
-The primary purpose of this model is to showcase all the necessary components that will eventually facilitate its deployment as an API—allowing it to be put into production and leveraged to enhance Bob's decision-making process.
+The quality of wine is its normative indicator for chemical composition, color, saturation, aroma and taste.
 
 ## Overall analysis and results
 
-If you want to see with detail what kind of analysis and results we get in order to build a solutions around a SVM model, you can check out [this proyect notebook](mobilepc/docs/mobile-price-prediction-0-983.ipynb), where you cand find all the stages of a Machine Learning model selection.
+The problem that is addressed is to predict the quality of the wine using the data provided. Knowing that there are many wines of normal, excellent and bad quality. And the solution (notebook) it can find in the next link: https://github.com/diegomendozaglez/proyectofinalwine/blob/main/notebook/NotebookWine1.ipynb
+
 
 ## Setup
 
