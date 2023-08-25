@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException, status
 from predictor.predict import ModelPredictor
 from starlette.responses import JSONResponse
 
-from .models.models import Mobile
+from .models.models import Wine
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PARENT_DIR = os.path.abspath(os.path.join(CURRENT_DIR, ".."))
@@ -14,10 +14,10 @@ GRANDPARENT_DIR = os.path.abspath(os.path.join(PARENT_DIR, ".."))
 ROOT_DIR = os.path.abspath(os.path.join(GRANDPARENT_DIR, ".."))
 DATASETS_DIR = os.path.abspath(os.path.join(CURRENT_DIR, "data"))
 
-PIPELINE_NAME = 'SVM'
+PIPELINE_NAME = 'RFC'
 PIPELINE_SAVE_FILE = PARENT_DIR + f'\\models\\{PIPELINE_NAME}_output.pkl'
 
-TRAIN_MAIN_DIR = PARENT_DIR + '\\mobilepc.py'
+TRAIN_MAIN_DIR = PARENT_DIR + '\\winemodel.py'
 
 PYTHON_DIR = ROOT_DIR + '\\venv\\Scripts\\python'
 
@@ -26,33 +26,24 @@ app = FastAPI()
 
 @app.get('/', status_code=200)
 async def healthcheck():
-    return 'Mobile classifier is all ready to go!'
+    return 'Wine model is ready!'
 
 
 @app.post('/predict')
-def extract_name(mobile_features: Mobile):
+def extract_name(wine_features: Wine:
     try:
         predictor = ModelPredictor(PIPELINE_SAVE_FILE)
-        X = {'battery_power': [mobile_features.battery_power],
-             'blue': [mobile_features.blue],
-             'clock_speed': [mobile_features.clock_speed],
-             'dual_sim': [mobile_features.dual_sim],
-             'fc': [mobile_features.fc],
-             'four_g': [mobile_features.four_g],
-             'int_memory': [mobile_features.int_memory],
-             'm_dep': [mobile_features.m_dep],
-             'mobile_wt': [mobile_features.mobile_wt],
-             'n_cores': [mobile_features.n_cores],
-             'pc': [mobile_features.pc],
-             'px_height': [mobile_features.px_height],
-             'px_width': [mobile_features.px_width],
-             'ram': [mobile_features.ram],
-             'sc_h': [mobile_features.sc_h],
-             'sc_w': [mobile_features.sc_w],
-             'talk_time': [mobile_features.talk_time],
-             'three_g': [mobile_features.three_g],
-             'touch_screen': [mobile_features.touch_screen],
-             'wifi': [mobile_features.wifi]}
+        X = {'fixed_acidity': [wine_features.fixed_acidity],
+             'volatile_acidity': [wine_features.volatile_acidity],
+             'citric_acid': [wine_features.citric_acid],
+             'residual_sugar': [wine_features.residual_sugar],
+             'chlorides': [wine_features.chlorides],
+             'free_sulfur_dioxide': [wine_features.free_sulfur_dioxide],
+             'total_sulfur_dioxide': [wine_features.total_sulfur_dioxide],
+             'density': [wine_features.density],
+             'pH': [wine_features.pH],
+             'sulphates': [wine_features.sulphates],
+             'alcohol': [wine_features.alcohol]}
         prediction = predictor.predict(pd.DataFrame(X))
         return JSONResponse(f"Predicted Price Range: {prediction}")
     except Exception as e:
@@ -82,7 +73,7 @@ async def train_model():
         )
 
         if result.returncode == 0:
-            message = "Model training script executed successfully"
+            message = "Model training executed successfully"
             response_text = result.stdout
         else:
             message = f"An error occurred: {result.stderr}"
