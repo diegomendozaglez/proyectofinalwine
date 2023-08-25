@@ -1,6 +1,5 @@
-import logging
-
 import requests
+import logging
 from fastapi import Body, FastAPI
 
 logger = logging.getLogger(__name__)
